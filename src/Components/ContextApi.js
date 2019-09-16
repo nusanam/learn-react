@@ -9,7 +9,7 @@ const initialState = {
 
 const MyContext = React.createContext(initialState);
 
-class App extends Component {
+class ContextApi extends Component {
   state = {
     name: "Andy",
     age: 27
@@ -64,4 +64,4 @@ class Person extends Component {
   }
 }
 
-export default App;
+export default ContextApi;
