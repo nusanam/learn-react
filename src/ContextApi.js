@@ -31,38 +31,37 @@ class App extends Component {
       </MyContext.Provider>
     );
   }
-} ins: [
-  '@babe
+}
 
 function Family(props) {
-    return (
-      <div>
-        <Person />
-      </div>
-    )
-  }
+  return (
+    <div>
+      <Person />
+    </div>
+  )
+}
 
 class Person extends Component {
 
-    static contextType = MyContext;
+  static contextType = MyContext;
 
-    render() {
-      return (
-        <div className="person">
-          <MyContext.Consumer>
-            {(context) => (
-              <React.Fragment>
-                <p>React Context API Demo</p>
-                <div>{"Name: " + context.state.name}</div>
-                <div>{"Age: " + context.state.age}</div>
-                <button onClick={context.itsMyBirthday}>Get Older</button>
-              </React.Fragment>
+  render() {
+    return (
+      <div className="person">
+        <MyContext.Consumer>
+          {(context) => (
+            <React.Fragment>
+              <p>React Context API Demo</p>
+              <div>{"Name: " + context.state.name}</div>
+              <div>{"Age: " + context.state.age}</div>
+              <button onClick={context.itsMyBirthday}>Get Older</button>
+            </React.Fragment>
 
-            )}
-          </MyContext.Consumer>
-        </div>
-      )
-    }
+          )}
+        </MyContext.Consumer>
+      </div>
+    )
   }
+}
 
 export default App;
