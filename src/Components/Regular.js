@@ -12,7 +12,7 @@ class Regular extends React.Component {
   render() {
     return (
       <div>
-        <p>Regular Stateful Component Demo</p>
+        <strong>Regular Stateful Component Demo</strong>
         <p>You clicked {this.state.count} times</p>
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>
           Click me

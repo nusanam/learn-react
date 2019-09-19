@@ -11,15 +11,11 @@ module.exports = {
           options: {
             presets: [
               '@babel/preset-env',
-              // {
-              //   plugins: [
-              //     '@babel/plugin-proposal-class-properties'
-              //   ]
-              // }
             ]
           },
         }
-      }
+      },
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] }
     ]
   },
   plugins: [

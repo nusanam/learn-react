@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, * as hooks from 'react';
+import reactime, { testUseState } from '../../../reactime/package/index'
+
+let useState = testUseState(hooks.useState);
 
 function UseStateHook() {
   const [count, setCount] = useState(0);
@@ -7,6 +10,7 @@ function UseStateHook() {
 
   return (
     <div>
+      <strong>useState Hook Demo</strong>
       <p>You clicked this {count} times</p>
       <button onClick={() => incrementMe()}>+1</button>
       <button onClick={() => setCount(count - 1)}>-1</button>
